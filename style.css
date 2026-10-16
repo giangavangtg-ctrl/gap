@@ -1,0 +1,59 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Định dạng chung cho container của Grid */
+.grid-container {
+    display: grid;
+    background-color: #444; /* Nền tối để lộ rõ khoảng cách (gap) màu xám */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Định dạng chung cho các Item */
+.grid-container div {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* =========================================
+   Ví dụ 1: Gap bằng nhau
+   ========================================= */
+.grid-gap-equal {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Hoặc có thể viết là gap: 20px; */
+}
+.grid-gap-equal div {
+    background-color: lightblue;
+    color: #000;
+}
+
+/* =========================================
+   Ví dụ 2: Gap khác nhau
+   ========================================= */
+.grid-gap-diff {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px; /* Hàng: 30px, Cột: 10px */
+}
+.grid-gap-diff div {
+    background-color: lightgreen;
+    color: #000;
+}
